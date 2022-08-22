@@ -19,10 +19,19 @@ html {
 }
 
 .intro {
-	font-size: 144px;
-	line-height: 147px;
+	font-size: 18vw;
+	line-height: 1;
 	color: var(--color-light);
 	font-family: "Roboto Mono", monospace;
+
+	@media (--screen-lg) {
+		font-size: 144px;
+		line-height: 147px;
+	}
+}
+
+.deep-impact {
+	margin-top: 40px;
 }
 
 .bg-image {
@@ -53,13 +62,13 @@ html {
 	font-size: 15vw;
 	font-family: "Roboto Mono", monospace;
 	position: absolute;
-	top: 20%;
+	top: 18%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
 	@media (--screen-lg) {
-		font-size: 200px;
-		top: 50%;
+		font-size: 15vw;
+		top: 40%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
