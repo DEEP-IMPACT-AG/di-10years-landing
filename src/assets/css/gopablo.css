@@ -1,0 +1,12 @@
+body {
+	text-align: center;
+}
+
+.header {
+	padding-top: 20px;
+}
+
+.test {
+	opacity: 0;
+	transform: translateX(20px);
+}
