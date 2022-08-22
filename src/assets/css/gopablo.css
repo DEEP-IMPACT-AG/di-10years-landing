@@ -1,5 +1,12 @@
+html,
 body {
-	text-align: center;
+	font-family: "Inter", sans-serif;
+	color: var(--color-light);
+}
+
+html {
+	background: url("../img/stars.svg") repeat-y #02011B;
+	background-size: 100vw;
 }
 
 .header {
@@ -9,4 +16,126 @@ body {
 .test {
 	opacity: 0;
 	transform: translateX(20px);
+}
+
+.intro {
+	font-size: 144px;
+	line-height: 147px;
+	color: var(--color-light);
+	font-family: "Roboto Mono", monospace;
+}
+
+.bg-image {
+	background-image: url("../img/planet-1.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	padding: 0 20px;
+	margin-top: 50px;
+
+	& .space-ship-1 {
+		position: absolute;
+		top: 0;
+		right: 20px;
+		max-width: 150px;
+
+		@media (--screen-lg) {
+			right: 20%;
+			max-width: initial;
+		}
+	}
+}
+
+.giga-text {
+	font-size: 15vw;
+	font-family: "Roboto Mono", monospace;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	@media (--screen-lg) {
+		font-size: 200px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.list-features {
+	@media (--screen-lg) {
+		padding-top: 100vh;
+	}
+
+	& .image {
+		margin-right: 20px;
+		margin-top: 320px;
+
+		@media (--screen-lg) {
+			margin-top: 0;
+			justify-content: flex-end;
+			margin-right: 100px;
+		}
+	}
+
+	& ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			display: block;
+			margin: 0 0 100px 0;
+			padding: 0 0 0 50px;
+			color: var(--color-light);
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 32px;
+			text-transform: uppercase;
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: -7px;
+				top: 0;
+				width: 16px;
+				height: 16px;
+				background: var(--color-light);
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: calc(100% + 100px);
+				width: 2px;
+				background: var(--color-light);
+			}
+
+			&:last-of-type {
+				&:after {
+					content: none;
+					display: none;
+				}
+			}
+
+			& span {
+				padding-bottom: 10px;
+				display: block;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 24px;
+				font-family: "Roboto Mono", monospace;
+				margin: -12px 0 0 0;
+			}
+		}
+	}
 }

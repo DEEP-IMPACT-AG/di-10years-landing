@@ -5,4 +5,5 @@ Entry Points
 *********************************************************************/
 
 @import "cherry-postcss/src/cherry";
+@import './utilities';
 @import './gopablo';
