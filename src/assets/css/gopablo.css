@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Lato", sans-serif;
 	color: var(--color-light);
 }
 
@@ -52,6 +52,19 @@ html {
 	padding: 0 20px;
 	margin-top: 50px;
 
+	&.image-2 {
+		background-image: url("../img/planet-2.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		display: flex;
+		padding-top: 20px;
+
+		& .image {
+			height: 100%;
+		}
+	}
+
 	& .space-ship-1 {
 		position: absolute;
 		top: 0;
@@ -97,6 +110,22 @@ html {
 			margin-right: 100px;
 		}
 	}
+
+	&.image-2 {
+		@media (--screen-lg) {
+			padding-top: 0;
+			margin: auto 0;
+		}
+
+		& .container {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		& .image {
+			margin-top: 0;
+		}
+	}
 }
 
 .special-list {
@@ -139,6 +168,8 @@ html {
 		}
 
 		&:last-of-type {
+			margin: 0;
+			padding: 0 0 0 50px;
 			&:after {
 				content: none;
 				display: none;
@@ -155,4 +186,20 @@ html {
 			margin: -12px 0 0 0;
 		}
 	}
+}
+
+.horizontal-scroll {
+	overflow: hidden;
+
+	& .flex {
+		gap: 100px;
+	}
+
+	& img {
+		width: 450px;
+	}
+}
+
+.limit-width {
+	max-width: 560px;
 }
