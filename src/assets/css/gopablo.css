@@ -67,7 +67,7 @@ html {
 
 	&.image-3 {
 		background-image: url("../img/planet-3.svg");
-		background-size: 120%;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		display: flex;
@@ -102,6 +102,40 @@ html {
 		}
 	}
 
+	&.image-5 {
+		background-image: url("../img/planet-3.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 20% 0;
+		display: flex;
+		padding-top: 20px;
+
+		& .image {
+			@media (--screen-lg) {
+				position: absolute;
+				left: 20%;
+				top: 0;
+				z-index: 0;
+			}
+		}
+	}
+
+	&.image-6 {
+		background-image: url("../img/planet-2.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		min-height: 100vh;
+		position: relative;
+		overflow: hidden;
+		padding: 0 20px;
+		margin-top: 50px;
+
+		& .image {
+			margin-top: 0;
+		}
+	}
+
 	& .space-ship-1 {
 		position: absolute;
 		top: 0;
@@ -113,23 +147,25 @@ html {
 			max-width: initial;
 		}
 	}
+}
 
-	& .numbers {
-		line-height: 1;
-		text-align: center;
+.numbers {
+	line-height: 1;
+	text-align: center;
 
-		& span {
-			font-size: 15vw;
-			font-weight: 700;
-			font-family: "Roboto Mono", monospace;
-		}
+	& span {
+		display: block;
+		font-size: 13vw;
+		font-weight: 700;
+		font-family: "Roboto Mono", monospace;
+	}
 
-		& em {
-			font-size: 11vw;
-			font-weight: 300;
-			font-style: normal;
-			color: rgba(255, 255, 255, 0.7);
-		}
+	& em {
+		display: block;
+		font-size: 8vw;
+		font-weight: 300;
+		font-style: normal;
+		color: rgba(255, 255, 255, 0.7);
 	}
 }
 
@@ -148,11 +184,24 @@ html {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
+	&.last {
+		position: static;
+	}
 }
 
 .list-features {
 	@media (--screen-lg) {
 		padding-top: 100vh;
+	}
+
+	&.last {
+		padding-top: 5%;
+
+		@media (--screen-lg) {
+			padding-top: 20%;
+			padding-bottom: 0;
+		}
 	}
 
 	& .image {
@@ -329,4 +378,65 @@ html {
 
 .min-height-0 {
 	min-height: 0;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.orange {
+	color: #F16521;
+}
+
+.share {
+	& .planet {
+		margin: auto;
+		width: 316px;
+		height: 316px;
+		background-image: url("../img/planet-3.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: flex;
+
+		& button,
+		& a {
+			margin: auto;
+			background: var(--color-light);
+			border-color: var(--color-light);
+			color: var(--color-primary);
+			text-transform: uppercase;
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				transform: translate(80%, -90%);
+				display: block;
+				width: 152px;
+				height: 139px;
+				background-image: url("../img/people-7.svg");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+	}
+}
+
+footer {
+	display: block;
+	text-align: center;
+	padding: 20px;
+
+	& p {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 34px;
+		margin: 0;
+		padding: 0;
+		color: var(--color-light);
+	}
 }
