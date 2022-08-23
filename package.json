@@ -37,7 +37,7 @@
 	"author": "Luan Gjokaj <luan@riangle.com>",
 	"license": "MIT",
 	"dependencies": {
-		"@babel/core": "^7.18.10",
+		"@babel/core": "^7.18.13",
 		"@babel/preset-env": "^7.18.10",
 		"aos": "^2.3.4",
 		"autoprefixer": "^10.4.8",
