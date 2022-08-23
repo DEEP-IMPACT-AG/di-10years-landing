@@ -170,6 +170,7 @@ html {
 		&:last-of-type {
 			margin: 0;
 			padding: 0 0 0 50px;
+
 			&:after {
 				content: none;
 				display: none;
@@ -202,4 +203,45 @@ html {
 
 .limit-width {
 	max-width: 560px;
+}
+
+.best-of-swiss {
+	position: relative;
+
+	& .title {
+		font-weight: 900;
+		font-size: 8vw;
+		text-transform: uppercase;
+		hyphens: auto;
+		z-index: 10;
+		padding-top: 100%;
+
+		@media (--screen-lg) {
+			font-size: 5vw;
+			padding-top: 20%;
+		}
+
+		& strong {
+			color: #F16521;
+		}
+	}
+
+	& .image {
+		width: 725px;
+		height: 725px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		& .people {
+			position: absolute;
+			top: -5%;
+			right: 15%;
+		}
+
+		& .planet {
+			transform: rotate(180deg);
+		}
+	}
 }
