@@ -65,6 +65,43 @@ html {
 		}
 	}
 
+	&.image-3 {
+		background-image: url("../img/planet-3.svg");
+		background-size: 120%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		display: flex;
+		padding-top: 20px;
+
+		@media (--screen-lg) {
+			background-size: contain;
+			background-position: -10% 0;
+		}
+
+		& .image {
+			height: 100%;
+		}
+	}
+
+	&.image-4 {
+		background-image: url("../img/planet-2.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 120% 0;
+		display: flex;
+		padding-top: 20px;
+
+		& .image {
+			margin-top: 50px;
+
+			@media (--screen-lg) {
+				position: absolute;
+				right: 0;
+				z-index: 0;
+			}
+		}
+	}
+
 	& .space-ship-1 {
 		position: absolute;
 		top: 0;
@@ -74,6 +111,24 @@ html {
 		@media (--screen-lg) {
 			right: 20%;
 			max-width: initial;
+		}
+	}
+
+	& .numbers {
+		line-height: 1;
+		text-align: center;
+
+		& span {
+			font-size: 15vw;
+			font-weight: 700;
+			font-family: "Roboto Mono", monospace;
+		}
+
+		& em {
+			font-size: 11vw;
+			font-weight: 300;
+			font-style: normal;
+			color: rgba(255, 255, 255, 0.7);
 		}
 	}
 }
@@ -214,7 +269,7 @@ html {
 		text-transform: uppercase;
 		hyphens: auto;
 		z-index: 10;
-		padding-top: 100%;
+		padding-top: 60%;
 
 		@media (--screen-lg) {
 			font-size: 5vw;
@@ -230,9 +285,17 @@ html {
 		width: 725px;
 		height: 725px;
 		position: absolute;
-		top: 0;
 		right: 0;
 		z-index: -1;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-top: 100px;
+
+		@media (--screen-lg) {
+			margin-top: 0;
+			top: 0;
+			transform: none;
+		}
 
 		& .people {
 			position: absolute;
@@ -244,4 +307,26 @@ html {
 			transform: rotate(180deg);
 		}
 	}
+}
+
+.date {
+	padding-bottom: 10px;
+	display: block;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "Roboto Mono", monospace;
+	margin: -12px 0 0 0;
+}
+
+.planet-3 {
+	position: relative;
+}
+
+.min-height {
+	min-height: 100vh;
+}
+
+.min-height-0 {
+	min-height: 0;
 }
