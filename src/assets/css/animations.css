@@ -1,0 +1,6 @@
+#title-1,
+#di-logo,
+#title-2 {
+	opacity: 0;
+	transform: translateY(10px);
+}
