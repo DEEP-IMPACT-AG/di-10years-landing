@@ -24,7 +24,6 @@ import postcssPresetEnv from 'postcss-preset-env';
 import RevAll from 'gulp-rev-all';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
-import purgecss from 'gulp-purgecss';
 
 const { gulp, series, parallel, dest, src, watch } = pkg;
 
@@ -227,20 +226,6 @@ function stylesProd() {
 	return src('./src/assets/css/styles.css')
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(postcss(pluginsListProd))
-		.pipe(
-			purgecss({
-				content: ['./src/**/*.html'],
-				whitelist: ['aos-animate'],
-				extractors: [
-					{
-						extractor: (content) => {
-							return content.match(/[A-z0-9-:\/]+/g) || [];
-						},
-						extensions: ['css', 'html'],
-					},
-				],
-			})
-		)
 		.pipe(dest('./dist/assets/css'));
 }
 
