@@ -7,13 +7,39 @@
 #title-2,
 #image-1,
 #people-1,
-#list-1 li {
+#image-2,
+#best-of-swiss,
+#image-3,
+#numbers-1,
+#numbers-2,
+#numbers-3,
+#image-4,
+#image-5,
+#image-6 {
 	opacity: 0;
-	transform: translateY(20px);
+	transform: translateY(40px);
+}
+
+#people-2,
+#people-4 {
+	opacity: 0;
+	transform: translateX(40px);
+}
+
+#best-of-swiss-images {
+	opacity: 0;
+	transform: translateX(50%) translateX(40px);
+
+	@media (--screen-lg) {
+		transform: translateX(40px);
+	}
 }
 
 .special-list {
 	& li {
+		opacity: 0;
+		transform: translateY(40px);
+
 		& em {
 			height: 0;
 		}
