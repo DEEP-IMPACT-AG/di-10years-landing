@@ -270,7 +270,7 @@ html {
 			transform: rotate(45deg);
 		}
 
-		&:after {
+		& em {
 			content: "";
 			display: block;
 			position: absolute;

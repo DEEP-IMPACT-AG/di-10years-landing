@@ -1,6 +1,21 @@
+#space-ship-1 {
+	transition: none;
+}
+
 #title-1,
 #di-logo,
-#title-2 {
+#title-2,
+#image-1,
+#people-1,
+#list-1 li {
 	opacity: 0;
-	transform: translateY(10px);
+	transform: translateY(20px);
+}
+
+.special-list {
+	& li {
+		& em {
+			height: 0;
+		}
+	}
 }
