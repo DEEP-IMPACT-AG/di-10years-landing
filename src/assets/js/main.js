@@ -253,7 +253,7 @@ mm.add('(max-width: 991px)', () => {
 		opacity: 1,
 		y: '-50%',
 		x: 0,
-		delay: 0.3,
+		delay: 0,
 	});
 });
 

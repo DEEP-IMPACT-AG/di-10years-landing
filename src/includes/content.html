@@ -289,12 +289,23 @@
 
 <div class="share">
 	<div class="planet">
-		<button>Share</button>
+		<button id="social-share">Share</button>
 	</div>
 </div>
 
 <span class="space size-160"></span>
 
-<footer>
-	<p>Deep Impact © All Rights Reserved.</p>
-</footer>
+<div class="modal">
+	<button id="modal-close"></button>
+	<div class="modal-content">
+		<button id="modal-close-inner">
+			<img src="@@webRoot/assets/img/close.svg" alt="Close">
+		</button>
+		<h3 class="modal-title">Share</h3>
+		<div class="flex">
+			<button id="social-facebook">Facebook</button>
+			<button id="social-twitter">Twitter</button>
+		</div>
+	</div>
+</div>
+

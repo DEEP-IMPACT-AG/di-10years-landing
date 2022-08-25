@@ -28,7 +28,7 @@
 
 #best-of-swiss-images {
 	opacity: 0;
-	transform: translateX(50%) translateX(40px);
+	transform: translateY(-40%);
 
 	@media (--screen-lg) {
 		transform: translateX(40px);

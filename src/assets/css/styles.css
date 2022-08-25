@@ -8,3 +8,5 @@ Entry Points
 @import './utilities';
 @import './gopablo';
 @import './animations';
+@import './modal';
+@import './footer';
